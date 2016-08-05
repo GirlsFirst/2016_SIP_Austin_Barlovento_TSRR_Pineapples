@@ -1,0 +1,33 @@
+<style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 3500px}
+    
+    /* Set pink background color and 200% height */
+    .sidenav {
+      background-color: #FFDDC5;
+      height: 200%;
+    }
+    p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 {
+      background-color: #FF7F8C; /* pink */
+      color: #000000; /*!
+    }
+    /* Set pink background color, white text and some padding */
+    footer {
+      background-color: #EDBBA2;
+      color: white;
+      padding: 15px;
+    }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+    }
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+      .row.content {height: auto;}
+    }
+  </style>

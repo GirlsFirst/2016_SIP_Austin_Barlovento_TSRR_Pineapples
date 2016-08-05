@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- import JavaScript & css files-->
+<!--<link rel="stylesheet" href="Calendar.css">-->
+<script type="text/javascript" src="Calendar.js"></script>
+<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<style>
+a:link {
+    background-color: E8E8E8;
+}
+
+a:visited {
+    background-color: #E8E8E8;
+}
+
+a:hover {
+    background-color: pink;
+}
+
+a:active {
+    background-color: FF7F8C;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #FF7F8C;
+}
+* {box-sizing:border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana,sans-serif;}
+
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #FF7F8C;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    background: #E8E8E8;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #FF7F8C;
+    color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="month">
+  <ul>
+    <li class="prev"><</li>
+    <li class="next">></li>
+   
+    <li style="text-align:center">
+      March<br>
+      <span style="font-size:18px">2015</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li style="text-align:left">Su</li>
+  <li style="text-align:left">Mo</li>
+  <li style="text-align:left">Tu</li>
+  <li style="text-align:left">We</li>
+  <li style="text-align:left">Th</li>
+  <li style="text-align:left">Fr</li>
+  <li style="text-align:justify">Sa</li>
+  </p>
+</ul>
+
+<span class="active">
+
+<ul class="days">
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">1</button>
+  <div class="dropdown-content" style="left:0;">
+    I washed Captain!
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">2</button>
+  <div class="dropdown-content" style="left:0;">
+    Today I baked a cake!!
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">3</button>
+  <div class="dropdown-content" style="left:0;">
+    I found a purple rock today
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">4</button>
+  <div class="dropdown-content" style="left:0;">
+    I got very sick today:(
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">5</button>
+  <div class="dropdown-content" style="left:0;">
+    Still sick:(
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">6</button>
+  <div class="dropdown-content" style="left:0;">
+    I THREW UP YOU GUYS:[
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">7</button>
+  <div class="dropdown-content" style="left:0;">
+    Felt much better today! Went on a walk!
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">8</button>
+  <div class="dropdown-content" style="left:0;">
+    Went on a run, IM SO OUT OF SHAPE!
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">9</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">10</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">11</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">12</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">13</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">14</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">15</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">16</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">17</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">18</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">19</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">20</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">21</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">22</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">23</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">24</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">25</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">26</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">27</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">28</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">29</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">30</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+<li><div class="dropdown" style="float:left;">
+  <button class="dropbtn">31</button>
+  <div class="dropdown-content" style="left:0;">
+    TODAY I KILLED SOMEONE
+  </div>
+</div></li>
+</ul>
+  <!--<li><a href="">2</a></li>
+  <li><a href="">3</a></li>
+  <li><a href="">4</a></li>
+  <li><a href="">5</a></li>
+  <li><a href="">6</a></li>
+  <li><a href="">7</a></li>
+  <li><a href="">8</a></li>
+  <li><a href="">9</a></li>
+  <li><a href="">10</a></li>
+  <li><a href="">11</a></li>
+  <li><a href="">12</a></li>
+  <li><a href="">13</a></li>
+  <li><a href="">14</a></li>
+  <li><a href="">15</a></li>
+  <li><a href="">16</a></li>
+  <li><a href="">17</a></li>
+  <li><a href="">18</a></li>
+  <li><a href="">19</a></li>
+  <li><a href="">20</a></li>
+  <li><a href="">21</a></li>
+  <li><a href="">22</a></li>
+  <li><a href="">23</a></li>
+  <li><a href="">24</a></li>
+  <li><a href="">25</a></li>
+  <li><a href="">26</a></li>
+  <li><a href="">27</a></li>
+  <li><a href="">28</a></li>
+  <li><a href="">29</a></li>
+  <li><a href="">30</a></li>
+  <li><a href="">31</a></li> -->
+<p id="newItem" onmouseover="changeColor()">welcome hahaha!!!</p>
+</body>
+</html>
+
+<!--<span class="active"></span>-->
