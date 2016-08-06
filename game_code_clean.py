@@ -6,68 +6,148 @@ import time, random
 #0 = incomplete
 #1 = complete
 #The corresponding function will change this variable when the player has done everything for that area
-friend_house_complete=0
-docks_complete=0
-playground_complete=0
-school_complete=0
+friend_house_complete=True
+docks_complete=True
+playground_complete=True
+school_complete=True
 #Please fiz the huge blobbing of the text - I've tried and it's not working :*((((
+
+#**********Check**********
+
+def check(): #Checks to see if all locations are completed
+    #*side note: this doesn't appear when it runs
+    if (friend_house_complete==False  and  docks_complete==False  and  playground_complete==False  and  school_complete==False):
+        end_area()
+    else:
+        map()
 
 #**********End Area**********
 
 def end_area():
-    print("You made it!")
+    print("If you've decrypted the email, all four lines of code finally make sense.")
+    time.sleep(2)
+    print("If not, then decrypt them.")
+    while location  != "cabin by the woods":
+        location = user_input("Where is Alice?")
+        location.lower()
+        if location == "cabin by the woods":
+               print("Desperate to finally find Alice, you walk towards the can=bin in the woods.")
+               time.sleep(2)
+               print("You're anxious and despite your eagerness, apprehensive because you don't know what you'll see.")
+               time.sleep(2)
+               print("The damp, dark, and dreary, and studiously so, as though it will help your mood.")
+               time.sleep(2)
+               print("As soon as you see the cabin, you dash to the door as tough it will save you from the monsters of your imagination.")
+               time.sleep(2)
+               print("Then you realize the largest monster was probably in there.")
+               print("What do you do?")
+               print("-----------------------------")
+               print("[1]Kick down the door")
+               print("[2]Knock on the door")
+               selected=input(">> ")
+               if selected=="1":
+                    x=False
+                    print("You kick down the door and debris goes flying, it was an old and week door anyway.")
+                    time.sleep(2)
+                    print("You look inside and see a computer running in the corner and a window when you look to the front.")
+                    time.sleep(2)
+                    print('''You hear a voice you don't recognize call out "WAIT", but you can't do much else after that.''' )
+                    time.sleep(2)
+                    print("Some hits you hard on the back of the head, and you hit the floor, face first.")
+                    time.sleep(2)
+                    print('''"The last thing you hear before you black out is Alice's voice asking "Is she dead?"''')
+                    time.sleep(2)
+                    print("THE END")
+                    time.sleep(2)
+                    print("If you want a better ending - try again.")
+               elif selected=="2":
+                    x=False
+                    print("You knock on the door and wait for someone to open it.")
+                    time.sleep(2)
+                    print("You pray it's not a serial killer as the door creks open just enough for the person inside to see you, but not the other way around.")
+                    time.sleep(2)
+                    print("Before you have the chance to see who it was that opened the door, the figure pounces on you.")
+                    time.sleep(2)
+                    print("It wrpas it's arms around you in a giant hug.")
+                    time.sleep(2)
+                    print("It was Alice.")
+                    time.sleep(2)
+                    print('''Alice screams in joy "OMGITHOUGHTYOUWOULDNEVERFINDUSANDITHOUGHTTHECLUESWERETOCRYPTICANDOMGOMGOMGOMG
+               THEPASSWORDISAPPLEYOUMADEITEVENTHOUGHITWASTOOHARDAND
+               THEMESSAGESSHOULD'VEBEENMORESRAIGHTFORWARDBUTICOULD'TCONVINCEHER!!!!”''')
+               time.sleep(2)
+               print("You don't understand a thing of what she is saying, but you are overly glad to see her.")
+               time.sleep(2)
+               print ("You think everything is going to be okay, but just as you do, you see a silhouette creep up behind Alice.")
+               time.sleep(2)
+               print("If you would like to read the complete anding, please enter the password at the menu.")
 
 #**********Playground puzzle 2**********
 
 def playground_puzzle_2():
-    print("Random objects in sand, map stuff.")
+    print('''You see a sketch under the note, with x's on a map. Under the map was "X marks the spot"''')
+    time.sleep(2)
+    print("The x's on the map coordinate to various items placed in the sandbox.")
+    time.sleep(2)
     print(" ")
     time.sleep(2)
-    print("[1] Dig up item1")
-    print("[2] Dig up item2")
-    print("[3] Dig up item3")
-    print("[4] Dig up item4")
-    print("[5] Dig up item5")
+    print("[1] Dig under the pail")
+    print("[2] Dig under the shell")
+    print("[3] Dig under the pony")
+    print("[4] Dig under the shovel")
+    print("[5] Dig under the paper")
     print(" ")
     selected = ""
     while selected != "3":
-        print("What do you dig up? ")
+        print("What do you dig up?")
         selected=input(">> ")
         if selected == "3":
             print("You dig under the item and find a calender")
-            print("example of decoding") #Filler
+            print("The calender is very similar to the one on the blog, it has an x on the 12th of March.") #Filler
             time.sleep(2)
-            playground_complete=1
+            playground_complete=False
             check()
         else:
-            print("You dig under the item and find nothing.")
+            print("You find nothing but little bits of useless trash.")
 
 #**********Playground puzzle 1**********
 
 def playground_puzzle_1():
-    print("Story things") #Filler
+    print("You go to the playground in order to check for anything - as if they could hide anything there.")
+    time.sleep(2)
+    print("Although you know better, you still expect the giant colorful world you saw when you were younger.")
+    time.sleep(2)
+    print("Instead you get the faded-to-gray and tiny playground of your neighborhood.")
+    time.sleep(2)
+    print("It's not the first time you've seem it like this - but today it felt especially bare.")
+    time.sleep(2)
+    print("You glance over the area, not expecting anything, but you catch a note on the swings.")
+    time.sleep(2)
+    print("Resisting the temptation to sit on the swing set, you look at the note.")
+    time.sleep(2)
+    print("The note says:")
+    time.sleep(2)
+    print("What doesn't kill you makes you stronger - think about your child hood memories.")
+    time.sleep(2)
     selected=""
-    while selected != "broken arm" and selected != "broke arm" and selected != "arm":
+    while selected != "monkey bars" or  selected  != "monkeybars":
         print("A child hood memory was shared here.")
-        print("Do you remember it? ")
+        print("Do you remember where it was? ")
         print("-----------------------------")
         selected=input(">> ")
-        if selected == "broken arm" or selected == "broke arm" or selected == "arm":
+        if selected == "monkey bars" or  selected  == "monkeybars" :
             print(" ")
-            print("Alice hurt her arm on the monkey bars, you remember.")
-            print("go to monkey bars and find map to sandbox")
+            print("You remember about when Alice broke her arms on the monkey bars, and head over to them.")
+            print("On the side handle, you see enother note referring you to the sandbox.")
             print(" ")
             time.sleep(2)
             playground_puzzle_2()
         else:
-            print("No that wasn't what you remembered.")
-
-#**********Playground***********
-
+            print("No that wasn't the location the note referred to.")
+#********Playground********
 def playground():
-    print("You're headed to da playground") #Filler
-    time.sleep(2)
     playground_puzzle_1()
+
     
 #**********School puzzle 2**********
 
@@ -92,7 +172,7 @@ def school_puzzle_2():
             print(" ")
             print("The screen displays: ..---...--.(for example)")
             time.sleep(2)
-            school_complete=1
+            school_complete=False
             check()
         else:
             print("That is not the correct passowrd.")
@@ -157,14 +237,14 @@ def school():
     time.sleep(2)
     print("The doors had no locks. The small amount of children in town made it hard to maintain due to lack of funds.")
     time.sleep(2)
-    school_puzzle_1()    
+    school_puzzle_1()  
 
 #**********Docks puzzle 2**********
 
 def dock_puzzle_2():
     choice_puzzle = "" #Place Holder
     print("   ")
-    print("As you wwalk towards the dock you finally experience the cool air, freshwater smell, and the sound of moving water you had been waiting for.")
+    print("As you walk towards the dock you finally experience the cool air, freshwater smell, and the sound of moving water you had been waiting for.")
     time.sleep(2)
     print("You see an expansive lake before you.")
     time.sleep(2)
@@ -193,7 +273,7 @@ def dock_puzzle_2():
             print("[Post, Line, Word]")
             print("   ")
             time.sleep(2)
-            docks_complete=1
+            docks_complete=False
             check()
         else:
             print("   ")
@@ -229,7 +309,7 @@ def dock_puzzle_1():
             time.sleep(2)
             print(" ")
             while choice_puzzle_2 != "cabin":
-                choice_puzzle_2 = input("Where is the fire pit? ")
+                choice_puzzle_2 = input("Where is the fire pit?")
                 if choice_puzzle_2 == "cabin":
                     print(" ")
                     print("You go to the fire pit. The embers were fresh, a fire was recently lit here the night before.")
@@ -314,7 +394,7 @@ def friend_house_puzzle_2(): #puzzle 2 for friend's house
                 time.sleep(2)
                 print("You note down the post and notice a striking similarity to the email.")
                 time.sleep(2)
-                friend_house_complete =1
+                friend_house_complete ==False
                 check()
             else:
                 print("")
@@ -385,6 +465,7 @@ def friend_house_puzzle_1(): #puzzle 1 for friend's house
             time.sleep(2)
             friend_house_puzzle_1()
 
+
 #**********Friend's House**********
 
 def friend_house():
@@ -453,7 +534,7 @@ def map(): #Hub for locations
     selected=input(">> ")
 
     if selected=="1":
-        if friend_house_complete==1:
+        if friend_house_complete==False:
             print("I don't need to go here.")
             time.sleep(2)
             map()
@@ -462,7 +543,7 @@ def map(): #Hub for locations
             time.sleep(2)
             friend_house()
     elif selected=="2":
-        if docks_complete==1:
+        if docks_complete==False:
             print("I don't need to go here.")
             time.sleep(2)
             map()
@@ -471,7 +552,7 @@ def map(): #Hub for locations
             time.sleep(2)
             docks()
     elif selected=="3":
-        if school_complete==1:
+        if school_complete==False:
             print("I don't need to go here.")
             time.sleep(2)
             map()
@@ -480,7 +561,7 @@ def map(): #Hub for locations
             time.sleep(2)
             school()            
     elif selected=="4":
-        if playground_complete==1:
+        if playground_complete==False:
             print("I don't need to go here.")
             time.sleep(2)
             map()
@@ -506,15 +587,6 @@ def map(): #Hub for locations
         print("Invalid Input")
         print("")
         time.sleep(2)
-        map()
-
-#**********Check**********
-
-def check(): #Checks to see if all locations are completed
-    #*side note: this doesn't appear when it runs
-    if (friend_house_complete==1 and docks_complete==1 and playground_complete==1 and school_complete==1):
-        end_area()
-    else:
         map()
 
 #**********Start Area**********
@@ -630,7 +702,7 @@ def start_area(): #Tutorial!
         start_num=4 #Place Holder
         answer="5th message"
         while (start_num>0):
-            print("What does it say?")
+            print("What does it say? (Hint: It's a rank number and a word)")
             print("-----------------------------")            
             selected=input(">> ")
             fixed_entry=selected.lower() #This puts whatever the user entered (with the exception of numbers) into lowercase
@@ -649,8 +721,9 @@ def start_area(): #Tutorial!
                 print("3/1/2/9/14") 
                 print("[12, 2, 2]")
                 print("-  ....  .")
-                print("9w17; 5")
-                print("www.immablog.omg") #PUT THE BLOG LINK HERE
+                print("3Th12")
+                
+                print("Use the blog...") #PUT THE BLOG LINK HERE
                 print(" ")
                 time.sleep(2)
                 print("It doesn't make any sense but something about it worries you.")
@@ -695,7 +768,14 @@ def start_menu(): #First thing you see
     print("[1]Play")
     print("[2]Website Link")
     print("[3]Quit")
+    print("")
+    print("Please note that just about every puzzle will have an answer ON THE BLOG. You need the blog to get through the game.")
+    print("Be carefully observant, the blog is your best friend.")
+    print("The game will not take capitals, please write in lowercase.")
+    print("")
     selected=input(">> ")
+    
+    #***************LOAD STUFF***************
     
     if selected=="1":
         print("Loading Game...")
@@ -727,7 +807,6 @@ def start_menu(): #First thing you see
         quit()
         
     #**********Cheat Entries**********
-    #no caps, no spaces!
     
     elif selected=="map":
         map()
