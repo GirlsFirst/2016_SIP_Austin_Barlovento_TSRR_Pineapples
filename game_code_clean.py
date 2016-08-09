@@ -10,7 +10,6 @@ friend_house_complete=False
 docks_complete=False
 playground_complete=False
 school_complete=False
-#Please fiz the huge blobbing of the text - I've tried and it's not working :*((((
 
 #**********Check**********
 
@@ -28,9 +27,9 @@ def check(): #Checks to see if all locations are completed
 #**********End Area**********
 
 def end_area():
-    print("If you've decrypted the email, all four lines of code finally make sense.")
+    print("If you've decrypted the email, all four lines finally make sense.")
     time.sleep(2)
-    print("If not, then decrypt them.")
+    print("If not, then decrypt the email from the unknown sender.")
     location = ""
     while location  != "cabin by the woods":
         location = input("Where is Alice?")
@@ -62,25 +61,27 @@ def end_area():
                     time.sleep(2)
                     print("Someone hits you hard on the back of the head, and you hit the floor, face first.")
                     time.sleep(2)
-                    print('''"The last thing you hear before you black out is Alice's voice asking "Are they dead?"''')
+                    print('''"The last thing you hear before you black out is Alice's voice asking "Is s(he) dead?"''')
                     time.sleep(2)
                     print("THE END")
                     time.sleep(2)
                     print("If you want a better ending - try again.")
-                    print(" ")
+                    start_menu()
                elif selected=="2":
-                    x=False
-                    print("You knock on the door and wait for someone to open it.")
-                    time.sleep(2)
-                    print("You pray it's not a serial killer as the door creaks open just enough for the person inside to see you, but not the other way around.")
-                    time.sleep(2)
-                    print("Before you have the chance to see who it was that opened the door, the figure pounces on you.")
-                    time.sleep(2)
-                    print("It wrpas it's arms around you in a giant hug.")
-                    time.sleep(2)
-                    print("It was Alice.")
-                    time.sleep(2)
-                    print('''Alice screams in joy "I'm so glad to see you again!”''')
+                   x=False
+                   print("You knock on the door and wait for someone to open it.")
+                   time.sleep(2)
+                   print("You pray it's not a serial killer as the door creaks open just enough for the person inside to see you, but not the other way around.")
+                   time.sleep(2)
+                   print("Before you have the chance to see who it was that opened the door, the figure pounces on you.")
+                   time.sleep(2)
+                   print("It wraps it's arms around you in a giant hug.")
+                   time.sleep(2)
+                   print("It was Alice.")
+                   time.sleep(2)
+                   print('''OMGITHOUGHTYOUWOULDNEVERFINDUSANDITHOUGHTTHECLUESWERETOCRYPTICAND
+              OMGOMGOMGOMGTHEPASSWORDISAPPLEYOUMADEITEVENTHOUGHITWASTOOHARDAND
+              THEMESSAGESSHOULD'VEBEENMORESRAIGHTFORWARDBUTICOULD'TCONVINCEHER!!!!''')
                    time.sleep(2)
                    print(" ")
                    print("You don't understand a thing of what she is saying, but you are overly glad to see her.")
@@ -89,7 +90,7 @@ def end_area():
                    time.sleep(2)
                    print("THE END")
                    print(" ")
-               print("If you would like to read the complete ending, please enter the password at the menu.")
+                   print("If you would like to read the complete ending, please enter the password at the menu.")
 
 #**********Playground puzzle 2**********
 
@@ -138,11 +139,11 @@ def playground_puzzle_1():
     time.sleep(2)
     print("The note says:")
     time.sleep(2)
-    print("What doesn't kill you makes you stronger - think about your child hood memories.")
+    print("What doesn't kill you makes you stronger - think about your childhood memories.")
     time.sleep(2)
     selected=""
     while selected != "monkey bars" or  selected  != "monkeybars":
-        print("A child hood memory was shared here.")
+        print("A childhood memory was shared here.")
         print("Do you remember where it was? ")
         print("-----------------------------")
         selected=input(">> ")
@@ -248,7 +249,7 @@ def school():
     print("You had a few fond memories of the place, but you were glad you were only visiting.")
     print(" ")
     time.sleep(2)
-    print("With no children in town, the school ended up shutting down, so there was noone there.")
+    print("With no children in town, the school ended up shutting down, so there was no one there.")
     time.sleep(2)
     print("You manage to get into the school building by climbing the fence.")
     time.sleep(2)
@@ -381,14 +382,7 @@ def friend_house_puzzle_2(): #puzzle 2 for friend's house
     time.sleep(2)
     print("It reads:")
     time.sleep(2)
-    print ('''          Let's go back
-           Back to the past
-           Right at the beginning
-           Far befor the end.
-           It's not too hard
-           Don't look to far
-           Numbers don't appear
-           as what they are''')
+    print ('''All things have a time stamp. The answer to this is the first timestamp.''')
     print("  ")
     time.sleep(2)
     print ("So far you've gotten the hange of this, and guess what you look at?")
@@ -396,12 +390,12 @@ def friend_house_puzzle_2(): #puzzle 2 for friend's house
     print ("That's right, the BLOG!!!")
     time.sleep(2)
     print("  ")
-    while choice_puzzle !=  "3908":
+    while choice_puzzle !=  "3911":
             print("What is the code?")
             print("*it's a four-digit number")
             print("-----------------------------")
             choice_puzzle = input(">> ")
-            if  choice_puzzle =="3908":
+            if  choice_puzzle =="3911":
                 print(" ")
                 print("You successfully open the phone and you believe you have it all under control.")
                 time.sleep(2)
@@ -432,23 +426,23 @@ def friend_house_puzzle_2(): #puzzle 2 for friend's house
 def friend_house_puzzle_1(): #puzzle 1 for friend's house
     choice_puzzle = False #Place Holder
     print(" ")
-    print("You look around the familiar, grandiose room. You see the bed to your right, a closest just behind it,")
+    print("You look around the familiar, grandiose room. You see the bed to your right, a closet just behind it,")
     time.sleep(2)
     print("a desk to your left with papers all over it, a bookshelf lined with colorful books -")
     time.sleep(2)
     print("most of them untouched. Because of all the contact you've made with her through technology, you think")
     time.sleep(2)
-    print("about any technology that could have been left behind. Her reliance on her phone was extreme.")
+    print("about any technology that could have been left behind. She used her phone very often...")
     print(" ")
     time.sleep(2)
-    print("The police had tracked it to the house, but could not identify it's exact location.")
+    print("You ask the police about it, and they tell you that they had tracked it to the house, but could not identify it's exact location.")
     time.sleep(2)
     print("You glance at the blog for any clues as to where the phone could be.")
     time.sleep(2)
     print(" ")
      
     while choice_puzzle != "closet":
-        choice_puzzle = input("Where is the phone? ")
+        choice_puzzle = input("Where is the phone?")
         if choice_puzzle == "closet":
             print(" ")
             print("You walk into the expansive closet. One wall is covered in shoes, the other three are")
@@ -457,7 +451,7 @@ def friend_house_puzzle_1(): #puzzle 1 for friend's house
             time.sleep(2)
             print("of the room. Resting neatly on the chair, parallel and propped up as if it was waiting for you, was the phone.")
             time.sleep(2)
-            print("A chill runs down your spine.")
+            print("A chill runs down your spine, it was too easy to find, especially if the police had already looked for it.")
             time.sleep(2)
             print(" ")
             friend_house_puzzle_2()
@@ -516,7 +510,7 @@ def friend_house():
     print("You told them that you wanted to find a lead if you could.")
     time.sleep(2)
     print("They protest for your sake,")
-    print("but your stubborn mule like presistence gains you access to her room.")
+    print("but your stubborn, mule like presistence gains you access to her room.")
     print(" ")
     time.sleep(2)
     global friend_house_complete
@@ -556,7 +550,6 @@ def map(): #Hub for locations
     global playground_complete
     global school_complete
     print("")
-    print("You look around.")
     print("Where will you go?")
     print("-----------------------------")
     print("[1]Friend's House (Easy Difficulty)")
@@ -727,9 +720,9 @@ def start_area(): #Tutorial!
         time.sleep(2)
         print("Intermixed with these next-to-useless spam mails are a few with single letter subjects.")
         time.sleep(2)
-        print("You filter these out and get the figures: h m e 5 s e s a t g e")
+        print("You filter these out and get the figures: h m e 5 s e s a t g ")
         time.sleep(2)
-        print("If you unscramble the letters...")
+        print("If you unscramble the numbers and letters...")
         time.sleep(2)
         
         start_num=4 #Place Holder
@@ -753,11 +746,11 @@ def start_area(): #Tutorial!
                 time.sleep(2)
                 print("3/1/2/9/14") 
                 print("[12, 2, 2]")
-                #PUT MORSE CODE HERE
                 print("-")
                 print("3Th12")
+                print("  ")
                 
-                print("Use the blog...") #PUT THE BLOG LINK HERE
+                print("You will need this in a while - use this and the blog to find us.") #PUT THE BLOG LINK HERE
                 print(" ")
                 time.sleep(2)
                 print("It doesn't make any sense but something about it worries you.")
@@ -770,16 +763,21 @@ def start_area(): #Tutorial!
         time.sleep(2)
         print(" ")
         print("Soon you notice an email from your boss.")
-        print("You cringe harder then you've ever cringed before.")
         time.sleep(2)
         print("The message reads: ")
-        print("OMFG GURL UR BFFL IS MISSIN OR SOMETHING LIEK THAT") #Spunky try hard boss is spunky
-        print("No seriously tho")
+        print("  ")
+        print("I realize this is your time off however, I've found something in your town.") #Spunky try hard boss is spunky
+        print("A police reported a girl, I think her name is Alice, has gone missing.")
+        print("If you have the time, I'd like you to cover it for us. Do you have any connections? Could you do it?")
+        print("  ")
         time.sleep(2)
-        print("Alice was your best friend.")
+        print("Of course, rather than covering the story, you became a part of it. Alice was your best friend.")
         time.sleep(2)
-        print("You try her phone but the call drops.")
+        print("Nerves getting the best of you, you try her phone, but the call drops.")
         time.sleep(2)
+        print("You call her mother to confirm it's a prank, but her mother crying on the porch tells you it's true.")
+        time.sleep(2)
+        print("Your one and only close friend has gone missing, and the worried you needs to find her.")
         map()
         
     elif selected=="2":
@@ -805,7 +803,8 @@ def start_menu(): #First thing you see
     print("")
     print("Please note that just about every puzzle will have an answer ON THE BLOG. You need the blog to get through the game.")
     print("Be carefully observant, the blog is your best friend.")
-    print("The game will not take capitals, please write in lowercase.")
+    print("The game will not take capitals, please write in lowercase. If options are available, enter the number of the option, not the option.")
+    print("(Brackets not required)")
     print("")
     selected=input(">> ")
     
@@ -875,6 +874,39 @@ def start_menu(): #First thing you see
         
     elif selected =="end area":
         end_area()
+    elif selected == "apple":
+        selected.lower()
+        print('''      Creeping was really more like very obviously walking over to you and ALice, though your mind percieved it otherwise. 
+        Assuming that the female figure was the kidnapper, you shove Alice onto her feet and attempt to make a run - but Alice holds you back.
+        You fear she has a version of the Stockholm Syndrome for a good while, until she speaks up in her constantly cheerful voice.
+        
+        "You remember Blithe, right?"
+        
+        A flood o memories rushed in. You recall the small little girl, who somehow was more tech savvy that even the IT crews at school.
+        It was abnormal for her age, somehow alot of people had trouble comprehending the fact that she knew how technology worked.
+        At the age of 12, she had disappeared out of town.
+        You and Alice thought she probably went to a bigger city, but according to the information Alice was giving you, she had taken on a job.
+        
+        Blithe had been playing Robin Hood for a while now. 
+        Alice's parents funded the town, so she had little to no work to do there.
+        She spent her time getting hired to hack into accounts that had ripped of consumeres - very legally for that matter,
+        but it turns out that at some point she had actually hacked into the wrong server.
+        Instead of hacking into the bank server of an illegal rip-off company, she hacked into the server of a mercenary agency.
+        
+        Apperently the information was top secret, and Blithe had been on the run from the mercenaries.
+        
+        Alice's had apparently been a kidnapping target on the server when Blithe saw it, and she had decided to help keep Alice safe until everything was okay.
+        They decided they needed your help to make it look like Alice had already been kidnapped and brought back by realeasing an article on your online journal.
+        Looks like your boss was getting the story she wanted.
+        
+        You didn't know whther to applaud Alice and Blithe for pulling this off without getting caught or whether to yell at them for freaking everyone out.
+        You decide to do the former, her mother would take care of the yelling.
+        But as soon as you get back, Alice's mother hugs Alice, and informs you that she knew all along, and that Blithe was more than welcome to use the cabin until 
+        she was safe.
+        She also explained that this was why they didn't want you to go into the room in the first place - they did not want to send you on a wild goose chase.
+        At this point, you simply walk off the porch after saying good bye, and are more than ready to slam something into the wall, perhaps your head.
+        
+        All said and done - everything ended well. Except for the fact that you've now lost a good majority of your sleep.''')
         
     else:
         print("Invalid Input")
