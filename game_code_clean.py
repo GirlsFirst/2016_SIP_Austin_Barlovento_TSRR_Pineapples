@@ -6,17 +6,17 @@ import time, random
 #0 = incomplete
 #1 = complete
 #The corresponding function will change this variable when the player has done everything for that area
-friend_house_complete=True
-docks_complete=True
-playground_complete=True
-school_complete=True
+friend_house_complete=False
+docks_complete=False
+playground_complete=False
+school_complete=False
 #Please fiz the huge blobbing of the text - I've tried and it's not working :*((((
 
 #**********Check**********
 
 def check(): #Checks to see if all locations are completed
     #*side note: this doesn't appear when it runs
-    if (friend_house_complete==False  and  docks_complete==False  and  playground_complete==False  and  school_complete==False):
+    if (friend_house_complete==True  and  docks_complete==True  and  playground_complete==True  and  school_complete==True):
         end_area()
     else:
         map()
@@ -31,13 +31,13 @@ def end_area():
         location = user_input("Where is Alice?")
         location.lower()
         if location == "cabin by the woods":
-               print("Desperate to finally find Alice, you walk towards the can=bin in the woods.")
+               print("Desperate to finally find Alice, you walk towards the cabin in the woods.")
                time.sleep(2)
-               print("You're anxious and despite your eagerness, apprehensive because you don't know what you'll see.")
+               print("You're anxious and, despite your eagerness, apprehensive because you don't know what you'll see.")
                time.sleep(2)
-               print("The damp, dark, and dreary, and studiously so, as though it will help your mood.")
+               print("The forest is damp, dark, and dreary, to a studious extent, not helping you at all.")
                time.sleep(2)
-               print("As soon as you see the cabin, you dash to the door as tough it will save you from the monsters of your imagination.")
+               print("As soon as you see the cabin, you dash to the door as though it will save you from the monsters of your imagination.")
                time.sleep(2)
                print("Then you realize the largest monster was probably in there.")
                print("What do you do?")
@@ -55,7 +55,7 @@ def end_area():
                     time.sleep(2)
                     print("Some hits you hard on the back of the head, and you hit the floor, face first.")
                     time.sleep(2)
-                    print('''"The last thing you hear before you black out is Alice's voice asking "Is she dead?"''')
+                    print('''"The last thing you hear before you black out is Alice's voice asking "Is (s)he dead?"''')
                     time.sleep(2)
                     print("THE END")
                     time.sleep(2)
@@ -80,7 +80,7 @@ def end_area():
                time.sleep(2)
                print ("You think everything is going to be okay, but just as you do, you see a silhouette creep up behind Alice.")
                time.sleep(2)
-               print("If you would like to read the complete anding, please enter the password at the menu.")
+               print("If you would like to read the complete ending, please enter the password at the menu.")
 
 #**********Playground puzzle 2**********
 
@@ -105,7 +105,7 @@ def playground_puzzle_2():
             print("You dig under the item and find a calender")
             print("The calender is very similar to the one on the blog, it has an x on the 12th of March.") #Filler
             time.sleep(2)
-            playground_complete=False
+            playground_complete=True
             check()
         else:
             print("You find nothing but little bits of useless trash.")
@@ -170,9 +170,9 @@ def school_puzzle_2():
             print("The computer unlocks and displays a screen fill with only dots and dashes, and nothing else works.")
             time.sleep(2)
             print(" ")
-            print("The screen displays: ..---...--.(for example)")
+            print("The screen displays:.... .")
             time.sleep(2)
-            school_complete=False
+            school_complete=True
             check()
         else:
             print("That is not the correct passowrd.")
@@ -273,7 +273,7 @@ def dock_puzzle_2():
             print("[Post, Line, Word]")
             print("   ")
             time.sleep(2)
-            docks_complete=False
+            docks_complete=True
             check()
         else:
             print("   ")
@@ -394,7 +394,7 @@ def friend_house_puzzle_2(): #puzzle 2 for friend's house
                 time.sleep(2)
                 print("You note down the post and notice a striking similarity to the email.")
                 time.sleep(2)
-                friend_house_complete ==False
+                friend_house_complete ==True
                 check()
             else:
                 print("")
@@ -534,8 +534,8 @@ def map(): #Hub for locations
     selected=input(">> ")
 
     if selected=="1":
-        if friend_house_complete==False:
-            print("I don't need to go here.")
+        if friend_house_complete==True:
+            print("You've already been through here, and don't feel the need to go back.")
             time.sleep(2)
             map()
         else:    
@@ -543,8 +543,8 @@ def map(): #Hub for locations
             time.sleep(2)
             friend_house()
     elif selected=="2":
-        if docks_complete==False:
-            print("I don't need to go here.")
+        if docks_complete==True:
+            print("You've already been through here, and don't feel the need to go back.")
             time.sleep(2)
             map()
         else:    
@@ -552,8 +552,8 @@ def map(): #Hub for locations
             time.sleep(2)
             docks()
     elif selected=="3":
-        if school_complete==False:
-            print("I don't need to go here.")
+        if school_complete==True:
+            print("You've already been through here, and don't feel the need to go back.")
             time.sleep(2)
             map()
         else:
@@ -561,8 +561,8 @@ def map(): #Hub for locations
             time.sleep(2)
             school()            
     elif selected=="4":
-        if playground_complete==False:
-            print("I don't need to go here.")
+        if playground_complete==True:
+            print("You've already been through here, and don't feel the need to go back.")
             time.sleep(2)
             map()
         else:
@@ -720,7 +720,7 @@ def start_area(): #Tutorial!
                 time.sleep(2)
                 print("3/1/2/9/14") 
                 print("[12, 2, 2]")
-                print("-  ....  .")
+                print("-")
                 print("3Th12")
                 
                 print("Use the blog...") #PUT THE BLOG LINK HERE
