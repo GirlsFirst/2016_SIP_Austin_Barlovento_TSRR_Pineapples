@@ -29,7 +29,7 @@ def check(): #Checks to see if all locations are completed
 def end_area():
     print("If you've decrypted the email, all four lines finally make sense.")
     time.sleep(2)
-    print("If not, then decrypt the email from the unknown sender.")
+    print("If not, then decrypt the 5th message in your inbox from earlier.")
     location = ""
     while location  != "cabin by the woods":
         location = input("Where is Alice?")
@@ -131,7 +131,7 @@ def playground_puzzle_1():
     print("Instead you get the faded-to-gray and tiny playground of your neighborhood.")
     print(" ")
     time.sleep(2)
-    print("It's not the first time you've seem it like this - but today it felt especially bare.")
+    print("It's not the first time you've seen it like this - but today it felt especially bare.")
     time.sleep(2)
     print("You glance over the area, not expecting anything, but you catch a note on the swings.")
     time.sleep(2)
@@ -320,38 +320,41 @@ def dock_puzzle_1():
     print(" ")
     choice_puzzle="" #Place Holder
     choice_puzzle_2="" #Place Holder
-    while choice_puzzle != "fire":
-        print("What is it?")
-        print("-----------------------------")
-        choice_puzzle = input(">> ")
-        if choice_puzzle == "fire":
-            print(" ")
-            print("You figure out the answer is fire, so you look around for anything that points to fire.")
-            time.sleep(2)
-            print("After thinking of all the locations, you recall there is a fire pit somewhere in the vicinity.")
-            time.sleep(2)
-            print(" ")
-            while choice_puzzle_2 != "cabin":
-                choice_puzzle_2 = input("Where is the fire pit?")
-                if choice_puzzle_2 == "cabin":
-                    print(" ")
-                    print("You go to the fire pit. The embers were fresh, a fire was recently lit here the night before.")
-                    time.sleep(2)
-                    print("Glancing into the pit, you see something shine and dig out the copied key.")
-                    time.sleep(2)
-                    print("You open the gate and leave the key in place of the note.")
-                    time.sleep(2)
-                    dock_puzzle_2()
-                else:
-                    print("")
-                    print("Nope that isn't it")
-                    time.sleep(2)
-                    dock_puzzle_1()
-        else:
-            print("")
-            print("Invalid Input")
-            time.sleep(2)
-            dock_puzzle_1()
+    x=True #Place Holder
+    
+    while x==True:
+        while choice_puzzle != "fire":
+            print("What is it?")
+            print("-----------------------------")
+            choice_puzzle = input(">> ")
+            if choice_puzzle == "fire":
+                print(" ")
+                print("You figure out the answer is fire, so you look around for anything that points to fire.")
+                time.sleep(2)
+                print("After thinking of all the locations, you recall there is a fire pit somewhere in the vicinity.")
+                time.sleep(2)
+                print(" ")
+                while choice_puzzle_2 != "cabin":
+                    choice_puzzle_2 = input("Where is the fire pit?")
+                    if choice_puzzle_2 == "cabin":
+                        print(" ")
+                        print("You go to the fire pit. The embers were fresh, a fire was recently lit here the night before.")
+                        time.sleep(2)
+                        print("Glancing into the pit, you see something shine and dig out the copied key.")
+                        time.sleep(2)
+                        print("You open the gate and leave the key in place of the note.")
+                        time.sleep(2)
+                        x=False
+                        dock_puzzle_2()
+                    else:
+                        print("")
+                        print("Nope that isn't it")
+                        time.sleep(2)
+            else:
+                print("")
+                print("Invalid Input")
+                time.sleep(2)
+
 
 #**********Docks**********
 
@@ -488,7 +491,7 @@ def friend_house_puzzle_1(): #puzzle 1 for friend's house
 #**********Friend's House**********
 
 def friend_house():
-    print("You enter the house and are greeted by your friends parents.")
+    print("You enter the house and are greeted by your friend's parents.")
     time.sleep(2)
     print("All three of you exchange hugs, and Alice's mother clings onto her husband for support.")
     time.sleep(2)
@@ -635,58 +638,43 @@ def start_area(): #Tutorial!
     print ("TUTORIAL")
     time.sleep(2)
     
-    x=True #Place Holder
-    while x==True:
-        print("     ")
-        print("What will you do?")
-        print("-----------------------------")
-        print("[1]Try a password")
-        print("[2]Do nothing")
-        selected=input(">> ")
-    
-        if selected=="1":
-            print("You try a password")
-            time.sleep(2)
-            print("You're denied access")
-            x=False
-        elif selected=="2":
-            print("You do nothing...")
-            time.sleep(2)
-            
-        else:
-            print("Invalid Input")
-            print("")
-            time.sleep(2)
-            start_area()            
-    
-    start_num=0 #Place Holder
-    while (start_num<=2):
-        time.sleep(2)
-        print("")
-        print("Now what?")
-        print("-----------------------------")
-        print("[1]Try again")
-        print("[2]Try another password")
-        selected=input(">> ")
-        time.sleep(2)
-        print("Nope that didn't work")
+    print("     ")
+    print("What will you do?")
+    print("-----------------------------")
+    print("[1]Try a password")
+    print("[2]Do nothing")
+    selected=input(">> ")
 
-        start_num=start_num+1
-        
-    remaining_guess=2 #Place Holder
-    while (remaining_guess>0):
+    if selected=="1":
+        print("You try a password")
         time.sleep(2)
-        print("")
-        print("Growing ever irritated with you the computer displays a hint")
-        print("Hint: Alice's Dog")
-        print("She probably has a picture on her blog...")
-        print("Enter a password")
-        print("-----------------------------")
-        selected=input(">> ")
-        fixed_entry=selected.lower() #This puts the enter in all lowercase characters
-        password="captain"
+        print("You're denied access")
+        x=False
+    elif selected=="2":
+        print("You do nothing...")
+        time.sleep(2)
         
-        if (fixed_entry==password):
+    else:
+        print("Invalid Input")
+        print("")
+        time.sleep(2)
+        start_area()            
+    
+    time.sleep(2)
+    fixed_entry=selected.lower() #This puts the enter in all lowercase characters
+    password="captain"
+    remaining_guess =10
+    print("")
+    print("Growing ever irritated with you the computer displays a hint")
+    print("Hint: Alice's Dog")
+    print("She probably has a picture on her blog...")
+    print("Enter a password")
+    print("-----------------------------")
+    
+    while selected != "captain":
+        selected=input(">> ")
+        selected.lower() #This puts the enter in all lowercase characters
+        if (selected == "captain"):
             print("Your password is accepted")
             time.sleep(2)
             print("The Desktop opens")
@@ -694,9 +682,10 @@ def start_area(): #Tutorial!
             print("")
             print("TUTORIAL COMPLETE!")
             print("")
-            remaining_guess=0
         else:
-            remaining_guess=remaining_guess-1
+            print("You're denied access, the password doesn not work.")
+            print("Try again.")
+        
             
     print("As your Desktop loads in you begin to pack for college and notice your computer notifications going off.")
     time.sleep(2)
@@ -722,7 +711,7 @@ def start_area(): #Tutorial!
         time.sleep(2)
         print("You filter these out and get the figures: h m e 5 s e s a t g ")
         time.sleep(2)
-        print("If you unscramble the numbers and letters...")
+        print("If you unscramble the numbers and letters you get two words...")
         time.sleep(2)
         
         start_num=4 #Place Holder
@@ -766,7 +755,7 @@ def start_area(): #Tutorial!
         time.sleep(2)
         print("The message reads: ")
         print("  ")
-        print("I realize this is your time off however, I've found something in your town.") #Spunky try hard boss is spunky
+        print("I realize this is your time off, however I've found something in your town.") #Spunky try hard boss is spunky
         print("A police reported a girl, I think her name is Alice, has gone missing.")
         print("If you have the time, I'd like you to cover it for us. Do you have any connections? Could you do it?")
         print("  ")
@@ -876,30 +865,30 @@ def start_menu(): #First thing you see
         end_area()
     elif selected == "apple":
         selected.lower()
-        print('''      Creeping was really more like very obviously walking over to you and ALice, though your mind percieved it otherwise. 
-        Assuming that the female figure was the kidnapper, you shove Alice onto her feet and attempt to make a run - but Alice holds you back.
-        You fear she has a version of the Stockholm Syndrome for a good while, until she speaks up in her constantly cheerful voice.
+        print('''      Creeping was really more like very obviously walking over to you and Alice, though your mind percieved it otherwise. 
+        Assuming that the female figure was the kidnapper, you pull Alice onto her feet and attempt to make a run, but Alice holds you back.
+        You fear she has a version of Stockholm Syndrome for a good while, until she speaks up in her constantly cheerful voice.
         
         "You remember Blithe, right?"
         
-        A flood o memories rushed in. You recall the small little girl, who somehow was more tech savvy that even the IT crews at school.
+        A flood of memories rushed in. You recall the small little girl, who somehow was more tech savvy that even the IT crews at school.
         It was abnormal for her age, somehow alot of people had trouble comprehending the fact that she knew how technology worked.
-        At the age of 12, she had disappeared out of town.
+        At the age of 16, she had disappeared out of town.
         You and Alice thought she probably went to a bigger city, but according to the information Alice was giving you, she had taken on a job.
         
         Blithe had been playing Robin Hood for a while now. 
         Alice's parents funded the town, so she had little to no work to do there.
-        She spent her time getting hired to hack into accounts that had ripped of consumeres - very legally for that matter,
+        She spent her time getting hired to hack into accounts that had ripped of customers - very legally for that matter,
         but it turns out that at some point she had actually hacked into the wrong server.
         Instead of hacking into the bank server of an illegal rip-off company, she hacked into the server of a mercenary agency.
         
         Apperently the information was top secret, and Blithe had been on the run from the mercenaries.
         
-        Alice's had apparently been a kidnapping target on the server when Blithe saw it, and she had decided to help keep Alice safe until everything was okay.
+        Alice had apparently been a kidnapping target on the server when Blithe saw it, and she had decided to help keep Alice safe until everything was okay.
         They decided they needed your help to make it look like Alice had already been kidnapped and brought back by realeasing an article on your online journal.
         Looks like your boss was getting the story she wanted.
         
-        You didn't know whther to applaud Alice and Blithe for pulling this off without getting caught or whether to yell at them for freaking everyone out.
+        You didn't know whether to applaud Alice and Blithe for pulling this off without getting caught or whether to yell at them for freaking everyone out.
         You decide to do the former, her mother would take care of the yelling.
         But as soon as you get back, Alice's mother hugs Alice, and informs you that she knew all along, and that Blithe was more than welcome to use the cabin until 
         she was safe.
